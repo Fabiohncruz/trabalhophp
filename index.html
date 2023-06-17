@@ -10,6 +10,7 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 .mySlides {display: none}
+
 </style>
 </head>
 <body class="w3-content w3-border-left w3-border-right">
@@ -28,15 +29,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <p><label><i class="fa fa-calendar-o"></i> Saída</label></p>
       <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="CheckOut" required>         
       <p><label><i class="fa fa-male"></i> Adultos</label></p>
-      <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">              
+      <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="12">              
       <p><label><i class="fa fa-child"></i>Crianças</label></p>
-      <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+      <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="4">
       <p><button class="w3-button w3-block w3-green w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> Pesquisar</button></p>
     </form>
   </div>
   <div class="w3-bar-block">
     <a href="#apartment" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i>Chácara</a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Se inscreva</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i>Se Inscreva</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Contato</a>
   </div>
 </nav>
@@ -58,14 +59,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 
   <!--Cabeçalho da apresentação de slides -->
   <div class="w3-container" id="apartment">
-
-    <h2 class="w3-text-green">Chácara Paraiso D'Mata</h2><title>Chácara Paraiso D'Mata</title>
-
-
+   
+    <h2 class="w3-text-grey11">Chácara Paraiso D'Mata</h2><title>Chácara Paraiso D'Mata</title>
+    
     <div class="w3-display-container mySlides">
     <img src="Entrada.webp" style="width:100%;margin-bottom:-6px">
       <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Entrada</p>
+        <p>Casa</p>
       </div>
     </div>
 
@@ -93,7 +93,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
       <div class="w3-display-container mySlides">
         <img src="Paisagem.webp" style="width:100%;margin-bottom:-6px">
           <div class="w3-display-bottomleft w3-container w3-black">
-            <p>Paisagem</p>
+            <p>Chacára</p>
         </div>
     </div>
 
@@ -107,12 +107,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <div class="w3-display-container mySlides">
       <img src="Cascata.webp" style="width:100%;margin-bottom:-6px;">
         <div class="w3-display-bottomleft w3-container w3-black">
-          <p>cascata</p>
+          <p>Cascata</p>
       </div>
     </div>
 
     <div class="w3-display-container mySlides">
-      <img src="Piscina.webp" style="width:80%;margin-bottom:-6px">
+      <img src="Piscina.webp" style="width:100%;margin-bottom:-6px">
         <div class="w3-display-bottomleft w3-container w3-black">
           <p>Piscina</p>
       </div>
@@ -184,26 +184,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
     <hr>
     
     <h4><strong>Informações Extras</strong></h4>
-    <p>Chácara com 10.000 mt de muita área verde e lagos de peixe, Piscina 5 x 10 com 75000 lts de água , com mini campo, mesa de jogos, churrasqueira, tanque de peixe (pesca esportiva)
+    <p>Chácara com 10.000 mt de muita área verde e lagos de peixe, Piscina 5 x 10 com 75000 lts de água, com mini campo, mesa de jogos, churrasqueira, tanque de peixe (pesca esportiva)
 localizado em um condominio</p>
     <p>Nós aceitamos: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
     <hr>
     
     <h4><strong>Outras Observações</strong></h4>
-    <p>Observar horario de silencio apos 21:30
-local não permite eventos, trata-se de um condomínio de chácaras</p>
-    <p>Se Inscreva</p>
+    <p>Observar horario de silencio apos 21:30, local não permite eventos, trata-se de um condomínio de chácaras</p>
+    <p></p>
     <p><button class="w3-button w3-green w3-third" onclick="document.getElementById('subscribe').style.display='block'">Se Inscreva</button></p>
   </div>
   <hr>
   
   <!--Contato -->
   <div class="w3-container" id="contact">
-    <h2>Contato</h2>
+    <h2> Contato</h2>
     <i class="fa fa-map-marker" style="width:30px"></i> Morretes, PR<br>
     <i class="fa fa-phone" style="width:30px"></i>Telefone : 41 984155298<br>
     <i class="fa fa-envelope" style="width:30px"> </i> Email: gav.encadernadora@yahoo.com.br<br>
-    <p>Duvidas? Entre em contato</p>
+    <p>Duvidas?  Entre em contato:</p>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
@@ -211,9 +210,7 @@ local não permite eventos, trata-se de um condomínio de chácaras</p>
     <button type="submit" class="w3-button w3-green w3-third">Envie uma Menssagem</button>
     </form>
   </div>
-  
-  <footer class="w3-container w3-padding-16" style="margin-top:32px">Desenvolvido por  <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></footer>
-
+  <footer class="w3-container w3-padding-16" style="margin-top:32px"><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green"></a></footer>
 <!-- Conteúdo da página final -->
 </div>
 
@@ -222,10 +219,10 @@ local não permite eventos, trata-se de um condomínio de chácaras</p>
   <div class="w3-modal-content w3-animate-zoom w3-padding-large">
     <div class="w3-container w3-white w3-center">
       <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
-      <h2 class="w3-wide">Se Inscreva</h2>
+      <h2 class="w3-wide"> Se Inscreva</h2>
       <p>Para mais informações envie seu Email </p>
       <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Enviar</button>
     </div>
   </div>
 </div>
