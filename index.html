@@ -1,272 +1,314 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Chácara Paraiso D'Mata</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
-.mySlides {display: none}
 
-</style>
+<head>
+  <title>Chácara Paraiso D'Mata</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Raleway", Arial, Helvetica, sans-serif
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    body {
+      background-image: url("background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 0;
+    }
+  </style>
 </head>
+
 <body class="w3-content w3-border-left w3-border-right">
 
-<!-- barra lateral/menu-->
-<nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
-  <div class="w3-container w3-display-container w3-padding-16">
-    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
-    <h3>Aluguel</h3>
-    <h3>A partir de R$: 900</h3>
-    <h6>Por noite</h6>
-    <hr>
-    <form action="/action_page.php" target="_blank">
-      <p><label><i class="fa fa-calendar-check-o"></i> Entrada</label></p>
-      <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="CheckIn" required>          
-      <p><label><i class="fa fa-calendar-o"></i> Saída</label></p>
-      <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="CheckOut" required>         
-      <p><label><i class="fa fa-male"></i> Adultos</label></p>
-      <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="12">              
-      <p><label><i class="fa fa-child"></i>Crianças</label></p>
-      <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="4">
-      <p><button class="w3-button w3-block w3-green w3-left-align" type="submit"><i class="fa fa-search w3-margin-right"></i> Pesquisar</button></p>
-    </form>
-  </div>
-  <div class="w3-bar-block">
-    <a href="#apartment" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i>Chácara</a>
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i>Se Inscreva</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Contato</a>
-  </div>
-</nav>
-
-<!-- Menu superior em telas pequenas -->
-<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
-  <span class="w3-bar-item">Aluguel</span>
-  <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-</header>
-
-<!--Efeito de sobreposição ao abrir a barra lateral em telas pequenas-->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !CONTEÚDO DA PÁGINA! -->
-<div class="w3-main w3-white" style="margin-left:260px">
-
-  <!-- Empurre o conteúdo para baixo em telas pequenas -->
-  <div class="w3-hide-large" style="margin-top:80px"></div>
-
-  <!--Cabeçalho da apresentação de slides -->
-  <div class="w3-container" id="apartment">
-   
-    <h2 class="w3-text-grey11">Chácara Paraiso D'Mata</h2><title>Chácara Paraiso D'Mata</title>
-    
-    <div class="w3-display-container mySlides">
-    <img src="Entrada.webp" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Casa</p>
-      </div>
+  <!-- barra lateral/menu-->
+  <nav class="w3-sidebar w3-light-grey w3-collapse w3-top" style="z-index:3;width:260px" id="mySidebar">
+    <div class="w3-container w3-display-container w3-padding-16">
+      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-transparent w3-display-topright"></i>
+      <h3>Aluguel</h3>
+      <h3>A partir de R$: 900</h3>
+      <h6>Por noite</h6>
+      <hr>
+      <form action="./validaReserva.php" method="post" target="_blank">
+        <p><label><i class="fa fa-calendar-check-o"></i> Entrada</label></p>
+        <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="entrada" required>
+        <p><label><i class="fa fa-calendar-o"></i> Saída</label></p>
+        <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="saida" required>
+        <p><label><i class="fa fa-male"></i> Adultos</label></p>
+        <input class="w3-input w3-border" type="number" value="1" name="adulto" min="1" max="12">
+        <p><label><i class="fa fa-child"></i>Crianças</label></p>
+        <input class="w3-input w3-border" type="number" value="0" name="crianca" min="0" max="4">
+        <p><button class="w3-button w3-block w3-green w3-left-align" type="submit"><i
+              class="fa fa-search w3-margin-right"></i> Pesquisar</button></p>
+      </form>
     </div>
-
-    <div class="w3-display-container mySlides">
-    <img src="Sala de estar.webp" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Sala de Jantar</p>
-      </div>
+    <div class="w3-bar-block">
+      <a href="#apartment" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-building"></i>Chácara</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-16"
+        onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i>Se Inscreva</a>
+      <a href="#contact" class="w3-bar-item w3-button w3-padding-16"><i class="fa fa-envelope"></i> Contato</a>
     </div>
+  </nav>
 
-    <div class="w3-display-container mySlides">
-    <img src="Banheiro 1.webp" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Banheiro 1</p>
-      </div>
-    </div>
+  <!-- Menu superior em telas pequenas -->
+  <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+    <span class="w3-bar-item">Aluguel</span>
+    <a href="javascript:void(0)" class="w3-right w3-bar-item w3-button" onclick="w3_open()"><i
+        class="fa fa-bars"></i></a>
+  </header>
 
-    <div class="w3-display-container mySlides">
-    <img src="ÁreaDeLazer.webp" style="width:100%;margin-bottom:-6px">
-      <div class="w3-display-bottomleft w3-container w3-black">
-        <p>Área de Lazer</p>
+  <!--Efeito de sobreposição ao abrir a barra lateral em telas pequenas-->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+    id="myOverlay"></div>
+
+  <!-- !CONTEÚDO DA PÁGINA! -->
+  <div class="w3-main w3-white" style="margin-left:260px">
+
+    <!-- Empurre o conteúdo para baixo em telas pequenas -->
+    <div class="w3-hide-large" style="margin-top:80px"></div>
+
+    <!--Cabeçalho da apresentação de slides -->
+    <div class="w3-container" id="apartment">
+
+      <h2 class="w3-text-grey11">Chácara Paraiso D'Mata</h2>
+      <title>Chácara Paraiso D'Mata</title>
+
+      <div class="w3-display-container mySlides">
+        <img src="Entrada.webp" style="width:100%;margin-bottom:-6px">
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Casa</p>
+        </div>
       </div>
-    </div>
+
+      <div class="w3-display-container mySlides">
+        <img src="Sala de estar.webp" style="width:100%;margin-bottom:-6px">
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Sala de Jantar</p>
+        </div>
+      </div>
+
+      <div class="w3-display-container mySlides">
+        <img src="Banheiro 1.webp" style="width:100%;margin-bottom:-6px">
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Banheiro 1</p>
+        </div>
+      </div>
+
+      <div class="w3-display-container mySlides">
+        <img src="ÁreaDeLazer.webp" style="width:100%;margin-bottom:-6px">
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Área de Lazer</p>
+        </div>
+      </div>
 
       <div class="w3-display-container mySlides">
         <img src="Paisagem.webp" style="width:100%;margin-bottom:-6px">
-          <div class="w3-display-bottomleft w3-container w3-black">
-            <p>Chacára</p>
+        <div class="w3-display-bottomleft w3-container w3-black">
+          <p>Chacára</p>
         </div>
-    </div>
+      </div>
 
-    <div class="w3-display-container mySlides">
-      <img src="Varanda.webp" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-container mySlides">
+        <img src="Varanda.webp" style="width:100%;margin-bottom:-6px">
         <div class="w3-display-bottomleft w3-container w3-black">
           <p>Varanda</p>
+        </div>
       </div>
-    </div>
 
-    <div class="w3-display-container mySlides">
-      <img src="Cascata.webp" style="width:100%;margin-bottom:-6px;">
+      <div class="w3-display-container mySlides">
+        <img src="Cascata.webp" style="width:100%;margin-bottom:-6px;">
         <div class="w3-display-bottomleft w3-container w3-black">
           <p>Cascata</p>
+        </div>
       </div>
-    </div>
 
-    <div class="w3-display-container mySlides">
-      <img src="Piscina.webp" style="width:100%;margin-bottom:-6px">
+      <div class="w3-display-container mySlides">
+        <img src="Piscina.webp" style="width:100%;margin-bottom:-6px">
         <div class="w3-display-bottomleft w3-container w3-black">
           <p>Piscina</p>
+        </div>
       </div>
-    </div>
 
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="Entrada.webp" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
-    </div>
+      <div class="w3-row-padding w3-section">
+        <div class="w3-col s3">
+          <img class="demo w3-opacity w3-hover-opacity-off" src="Entrada.webp" style="width:100%;cursor:pointer"
+            onclick="currentDiv(1)" title="Living room">
+        </div>
 
-    <div class="w3-col s3">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="Sala de estar.webp" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
-    </div>
+        <div class="w3-col s3">
+          <img class="demo w3-opacity w3-hover-opacity-off" src="Sala de estar.webp" style="width:100%;cursor:pointer"
+            onclick="currentDiv(2)" title="Dining room">
+        </div>
 
-    <div class="w3-col s3">
-         <img class="demo w3-opacity w3-hover-opacity-off" src="Banheiro 1.webp" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
-    </div>
+        <div class="w3-col s3">
+          <img class="demo w3-opacity w3-hover-opacity-off" src="Banheiro 1.webp" style="width:100%;cursor:pointer"
+            onclick="currentDiv(3)" title="Bedroom">
+        </div>
 
-    <div class="w3-col s3">
-        <img class="demo w3-opacity w3-hover-opacity-off" src="ÁreaDeLazer.webp" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
-    </div>
+        <div class="w3-col s3">
+          <img class="demo w3-opacity w3-hover-opacity-off" src="ÁreaDeLazer.webp" style="width:100%;cursor:pointer"
+            onclick="currentDiv(4)" title="Second Living Room">
+        </div>
 
-    <div class="w3-col s3">
-        <img class="demo w3-opacity w3-hover-opacity-off" src="Paisagem.webp" style="width:100%;cursor:pointer" onclick="currentDiv(5)" title="Paisagem">
-    </div>
+        <div class="w3-col s3">
+          <img class="demo w3-opacity w3-hover-opacity-off" src="Paisagem.webp" style="width:100%;cursor:pointer"
+            onclick="currentDiv(5)" title="Paisagem">
+        </div>
 
-    <div class="w3-col s3">
-        <img class="demo w3-opacity w3-hover-opacity-off" src="Varanda.webp" style="width:100%;cursor:pointer" onclick="currentDiv(6)" title="Varanda">
-    </div>
+        <div class="w3-col s3">
+          <img class="demo w3-opacity w3-hover-opacity-off" src="Varanda.webp" style="width:100%;cursor:pointer"
+            onclick="currentDiv(6)" title="Varanda">
+        </div>
 
-    <div class="w3-col s3">
-        <img class="demo w3-opacity w3-hover-opacity-off" src="Cascata.webp" style="width:100%;cursor:pointer;max-height: 113px;" onclick="currentDiv(7)" title="cascata">
-    </div>
+        <div class="w3-col s3">
+          <img class="demo w3-opacity w3-hover-opacity-off" src="Cascata.webp"
+            style="width:100%;cursor:pointer;max-height: 113px;" onclick="currentDiv(7)" title="cascata">
+        </div>
 
-    <div class="w3-col s3">
-        <img class="demo w3-opacity w3-hover-opacity-off" src="Piscina.webp" style="width:100%;cursor:pointer" onclick="currentDiv(8)" title="Piscina">
-    </div>
-</div>
-
-</div>
-
-  <div class="w3-container">
-    <h4><strong>A Chácara</strong></h4>
-    <div class="w3-row w3-large">
-      <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-male"></i> Maximo de Pessoas: 12</p>
-        <p><i class="fa fa-fw fa-bath"></i> Banheiro: 2</p>
-        <p><i class="fa fa-fw fa-bed"></i> Quartos: 4</p>
+        <div class="w3-col s3">
+          <img class="demo w3-opacity w3-hover-opacity-off" src="Piscina.webp" style="width:100%;cursor:pointer"
+            onclick="currentDiv(8)" title="Piscina">
+        </div>
       </div>
-      <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-clock-o"></i> Entrada: Após 8 AM</p>
-        <p><i class="fa fa-fw fa-clock-o"></i> Saída: 17 PM</p>
+
+    </div>
+
+    <div class="w3-container">
+      <h4><strong>A Chácara</strong></h4>
+      <div class="w3-row w3-large">
+        <div class="w3-col s6">
+          <p><i class="fa fa-fw fa-male"></i> Maximo de Pessoas: 12</p>
+          <p><i class="fa fa-fw fa-bath"></i> Banheiro: 2</p>
+          <p><i class="fa fa-fw fa-bed"></i> Quartos: 4</p>
+        </div>
+        <div class="w3-col s6">
+          <p><i class="fa fa-fw fa-clock-o"></i> Entrada: Após 8 AM</p>
+          <p><i class="fa fa-fw fa-clock-o"></i> Saída: 17 PM</p>
+        </div>
       </div>
+      <hr>
+
+      <h4><strong>Detalhes</strong></h4>
+      <div class="w3-row w3-large">
+        <div class="w3-col s6">
+          <p><i class="fa fa-fw fa-shower"></i>Chuveiro</p>
+          <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+          <p><i class="fa fa-fw fa-tv"></i> TV</p>
+        </div>
+        <div class="w3-col s6">
+          <p><i class="fa fa-fw fa-cutlery"></i>Cozinha</p>
+          <p><i class="fa fa-fw fa-wheelchair"></i> Acessibilidade</p>
+        </div>
+      </div>
+      <hr>
+
+      <h4><strong>Informações Extras</strong></h4>
+      <p>Chácara com 10.000 mt de muita área verde e lagos de peixe, Piscina 5 x 10 com 75000 lts de água, com mini
+        campo, mesa de jogos, churrasqueira, tanque de peixe (pesca esportiva)
+        localizado em um condominio</p>
+      <p>Nós aceitamos: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i
+          class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i
+          class="fa fa-cc-paypal w3-large"></i></p>
+      <hr>
+
+      <h4><strong>Outras Observações</strong></h4>
+      <p>Observar horario de silencio apos 21:30, local não permite eventos, trata-se de um condomínio de chácaras</p>
+      <p></p>
+      <p><button class="w3-button w3-green w3-third"
+          onclick="document.getElementById('subscribe').style.display='block'">Se Inscreva</button></p>
     </div>
     <hr>
-    
-    <h4><strong>Detalhes</strong></h4>
-    <div class="w3-row w3-large">
-      <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-shower"></i>Chuveiro</p>
-        <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
-        <p><i class="fa fa-fw fa-tv"></i> TV</p>
-      </div>
-      <div class="w3-col s6">
-        <p><i class="fa fa-fw fa-cutlery"></i>Cozinha</p>
-        <p><i class="fa fa-fw fa-wheelchair"></i> Acessibilidade</p>
+
+    <!--Contato -->
+    <div class="w3-container" id="contact">
+      <h2> Contato</h2>
+      <i class="fa fa-map-marker" style="width:30px"></i> Morretes, PR<br>
+      <i class="fa fa-phone" style="width:30px"></i>Telefone : 41 984155298<br>
+      <i class="fa fa-envelope" style="width:30px"> </i> Email: gav.encadernadora@yahoo.com.br<br>
+      <p>Duvidas? Entre em contato:</p>
+      <form action="./enviarContato.php" method="post" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Nome" required name="nome"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="email"></p>
+        <p><input class="w3-input w3-border" type="text" multiple maxlength="300" placeholder="Mensagem" required
+            name="mensagem"></p>
+        <button type="submit" class="w3-button w3-green w3-third">Envie uma Menssagem</button>
+      </form>
+    </div>
+    <footer class="w3-container w3-padding-16" style="margin-top:32px"><a href=./consultaReservas.php target="_blank"
+        class="w3-hover-text-green">Acesso administrador</a>
+    </footer>
+    <!-- Conteúdo da página final -->
+  </div>
+
+  <!-- Subscrever modal -->
+  <div id="subscribe" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom w3-padding-large">
+      <div class="w3-container w3-white w3-center">
+        <i onclick="document.getElementById('subscribe').style.display='none'"
+          class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
+        <h2 class="w3-wide"> Se Inscreva</h2>
+        <p>Para mais informações envie seu Email </p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+        <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom"
+          onclick="document.getElementById('subscribe').style.display='none'">Enviar</button>
       </div>
     </div>
-    <hr>
-    
-    <h4><strong>Informações Extras</strong></h4>
-    <p>Chácara com 10.000 mt de muita área verde e lagos de peixe, Piscina 5 x 10 com 75000 lts de água, com mini campo, mesa de jogos, churrasqueira, tanque de peixe (pesca esportiva)
-localizado em um condominio</p>
-    <p>Nós aceitamos: <i class="fa fa-credit-card w3-large"></i> <i class="fa fa-cc-mastercard w3-large"></i> <i class="fa fa-cc-amex w3-large"></i> <i class="fa fa-cc-cc-visa w3-large"></i><i class="fa fa-cc-paypal w3-large"></i></p>
-    <hr>
-    
-    <h4><strong>Outras Observações</strong></h4>
-    <p>Observar horario de silencio apos 21:30, local não permite eventos, trata-se de um condomínio de chácaras</p>
-    <p></p>
-    <p><button class="w3-button w3-green w3-third" onclick="document.getElementById('subscribe').style.display='block'">Se Inscreva</button></p>
   </div>
-  <hr>
-  
-  <!--Contato -->
-  <div class="w3-container" id="contact">
-    <h2> Contato</h2>
-    <i class="fa fa-map-marker" style="width:30px"></i> Morretes, PR<br>
-    <i class="fa fa-phone" style="width:30px"></i>Telefone : 41 984155298<br>
-    <i class="fa fa-envelope" style="width:30px"> </i> Email: gav.encadernadora@yahoo.com.br<br>
-    <p>Duvidas?  Entre em contato:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-    <button type="submit" class="w3-button w3-green w3-third">Envie uma Menssagem</button>
-    </form>
-  </div>
-  <footer class="w3-container w3-padding-16" style="margin-top:32px"><a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green"></a></footer>
-<!-- Conteúdo da página final -->
-</div>
 
-<!-- Subscrever modal -->
-<div id="subscribe" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom w3-padding-large">
-    <div class="w3-container w3-white w3-center">
-      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-button w3-xlarge w3-right w3-transparent"></i>
-      <h2 class="w3-wide"> Se Inscreva</h2>
-      <p>Para mais informações envie seu Email </p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <button type="button" class="w3-button w3-padding-large w3-green w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Enviar</button>
-    </div>
-  </div>
-</div>
+  <script>
+    // Script para abrir e fechar a barra lateral em tablets e telefones
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
 
-<script>
-// Script para abrir e fechar a barra lateral em tablets e telefones
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
 
-// Apresentação de slides de imagens do apartamento
-var slideIndex = 1;
-showDivs(slideIndex);
+    // Apresentação de slides de imagens do apartamento
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
-  x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
-}
-</script>
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = x.length }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+      }
+      x[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " w3-opacity-off";
+    }
+  </script>
 
 </body>
+
 </html>
